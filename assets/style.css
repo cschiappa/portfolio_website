@@ -267,15 +267,9 @@
     animation: twinkling 3s infinite;
 }
 .about-box{
-    width: 700px;
     position: relative;
-    bottom: 0px;
-    left: 0px;
-    background-color: transparent;
-    padding: 200px 130px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border: 2px solid blue;
+    padding: 200px 100px;
     z-index: 1000;
 }
 /* about text */
@@ -283,7 +277,7 @@
     font-size: 40px;
     color: #fff;
     font-family: 'designer-webfont';
-    text-align: left;
+    text-align: center;
     font-weight: normal;
 }
 .about-text p{
@@ -291,35 +285,52 @@
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
     text-align: left;
+    padding: 20px;
 }
 .languages-box{
-    width: 700px;
     position: relative;
     bottom: 0px;
     left: 0px;
     background-color: transparent;
-    padding: 200px 130px;
+    border: 2px solid blue;
+    padding: 200px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 1000;
 }
-.languages-text h2{
+.languages-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.languages-area h2{
     font-size: 40px;
     color: #fff;
     font-family: 'designer-webfont';
-    text-align: left;
-    font-weight: normal;
+    font-weight: normal; 
 }
-.languages-text ul{
-    padding-top: 20px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
+.every-image-container{
     display: flex;
     flex-direction: row;
-    justify-content: center;}
-.languages-text img{
+    justify-content: center;
+}
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.image-container img {
     padding: 20px;
+    width: 90px;
+    height: 90px;
+}
+
+.image-container p {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
