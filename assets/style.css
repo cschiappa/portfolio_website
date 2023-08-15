@@ -322,8 +322,8 @@
 
 .image-container img {
     padding: 20px;
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
 }
 
 .image-container p {
@@ -332,3 +332,45 @@
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
+.second-every-image-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.download-cv{
+    text-align: center;
+}
+.about-text a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px; /* Add padding for spacing inside the box */
+    border: 2px solid #fff; /* Border properties */
+    border-radius: 10px;
+}
+/* Menu buttons color change animation */
+.about-text a:hover{
+    /* text shadow */
+    text-shadow: -4px -4px 8px rgb(147, 0, 252), 
+    4px -4px 8px rgb(147, 0, 252), 
+    -4px 4px 8px rgb(147, 0, 252), 
+    4px 4px 8px rgb(147, 0, 252);
+    /* border shadow */
+    border-color: rgba(147, 0, 252, 0.4);
+    /* animation: borderChange 0.5s; */
+    box-shadow: -4px -4px 8px rgba(147, 0, 252, 0.4), 
+                4px -4px 8px rgb(147, 0, 252, 0.4), 
+                -4px 4px 8px rgb(147, 0, 252, 0.4), 
+                4px 4px 8px rgb(147, 0, 252, 0.4);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);  
+}
+.about-text a:not(:hover) {
+    /* text shadow */
+    text-shadow: #fff;
+    /* border shadow */
+    border-color: #fff;
+    /* animation: borderChange 0.5s; */
+    box-shadow: none;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);  
+  }
