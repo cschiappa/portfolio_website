@@ -39,9 +39,9 @@
                 
             <div class="nav-links" id="navLinks">
                 <ul>
-                    <li><a href="#pageTwo">about</a></li>
-                    <li><a href="projects.html">projects</a></li>
-                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="#pageTwo" class="button-animation">about</a></li>
+                    <li><a href="#pageThree" class="button-animation">projects</a></li>
+                    <li><a href="contact.html" class="button-animation">contact</a></li>
                 </ul>
             </div>
 
@@ -79,7 +79,7 @@
                     
                     Et deserunt voluptates quo dolorem architecto quo inventore illo in deleniti voluptatum. Sed fuga nisi est reiciendis error id enim facere in similique dicta ea temporibus sunt eum quaerat corrupti.</p>
                 <div class="download-cv">
-                    <a href="download.html">download cv</a>
+                    <a href="download.html" class="button-animation">download cv</a>
                 </div>
             </div>
         </nav>   
@@ -146,14 +146,50 @@
             <img src="assets/images/star.png" alt="star" class="new-star">      
         </div>
         <nav class="projects-box">
-            
+            <h1>Projects</h1>
+            <div class="projects-container">
+                <div class="project-item">
+                    <img src="assets/images/dark_background.png">
+                    <span class="line-one">Portfolio Website,</span>
+                    <span class="line-two">a fun way to present all my projects.</span>
+
+                    <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
+                    </p>
+                </div>
+                <div class="project-item">
+                    <img src="assets/images/dark_background.png">
+                    <span class="line-one">Pets Social,</span>
+                    <span class="line-two">an innovating social media for pets.</span>
+
+                    <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
+                    </p>
+                </div>
+                <div class="project-item">
+                    <img src="assets/images/dark_background.png">
+                    <span class="line-one">Lizzy Charts,</span>
+                    <span class="line-two">a web based portfolio of many trading strategies.</span>
+                
+                    <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
+                    </p>
+                </div>
+            </div>
+            <div class="projects-container">
+                <div class="project-item">
+                    <img src="assets/images/dark_background.png">
+                    <span class="line-one">Futures Trading Bot,</span>
+                    <span class="line-two">automation of trading made simpler.</span>
+                       
+                    <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
+                    </p>
+                </div>
+            </div>
         </nav>  
     </section>
     <!-- DARK MODE TOGGLE FILE -->
     <script src="dark-mode-toggle.js"></script>
 
     <script>
-        // Function to scroll to the "page-two" section
+        // Function to scroll to the "about" section
         function scrollToPageTwo() {
             const pageTwoSection = document.getElementById('pageTwo');
             if (pageTwoSection) {
@@ -165,6 +201,22 @@
         const aboutLink = document.getElementById('aboutLink');
         if (aboutLink) {
             aboutLink.addEventListener('click', scrollToPageTwo);
+        }
+    </script>
+
+    <script>
+        // Function to scroll to the "projects" section
+        function scrollToPageThree() {
+            const pageThreeSection = document.getElementById('pageThree');
+            if (pageThreeSection) {
+                pageThreeSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Attach the click event listener to the "projects" link
+        const projectsLink = document.getElementById('projectsLink');
+        if (projectsLink) {
+            projectsLink.addEventListener('click', scrollToPageThree);
         }
     </script>
     

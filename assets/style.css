@@ -104,7 +104,7 @@
     position: relative;
 }
 /* Menu buttons visuals*/
-.nav-links ul li a{
+.button-animation{
     color: #fff;
     text-decoration: none;
     font-size: 20px;
@@ -114,7 +114,7 @@
     border-radius: 10px;
 }
 /* Menu buttons color change animation */
-.nav-links ul li:hover a {
+.button-animation:hover {
     /* text shadow */
     text-shadow: -4px -4px 8px rgb(147, 0, 252), 
     4px -4px 8px rgb(147, 0, 252), 
@@ -129,7 +129,7 @@
                 4px 4px 8px rgb(147, 0, 252, 0.4);
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);  
 }
-.nav-links ul li a:not(:hover) {
+.button-animation:not(:hover) {
     /* text shadow */
     text-shadow: #fff;
     /* border shadow */
@@ -340,37 +340,83 @@
 .download-cv{
     text-align: center;
 }
-.about-text a{
+/* PAGE TWO - ABOUT PAGE */
+.page-three{
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-size: contain;
+    background-color: #070709;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    }
+.new-star{
+    top: 30%;
+    left: 90%;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    animation: twinkling 3s infinite;
+}
+/* PROJECTS PAGE */
+.projects-box{
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    background-color: transparent;
+    padding: 200px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+}
+.projects-box h1{
+    font-size: 40px;
     color: #fff;
-    text-decoration: none;
-    font-size: 20px;
+    font-family: 'designer-webfont';
+    font-weight: normal; 
+}
+/* first projects container */
+.projects-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.second-projects-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.project-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.project-item img{
+    padding: 20px;
+    width: 90%;
+    height: auto;
+}
+.project-item .line-one{
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;   
+}
+.line-two{
+    font-size: 14px;
+    color: #fff;
     font-family: 'Courier New', Courier, monospace;
-    padding: 10px; /* Add padding for spacing inside the box */
-    border: 2px solid #fff; /* Border properties */
-    border-radius: 10px;
 }
-/* Menu buttons color change animation */
-.about-text a:hover{
-    /* text shadow */
-    text-shadow: -4px -4px 8px rgb(147, 0, 252), 
-    4px -4px 8px rgb(147, 0, 252), 
-    -4px 4px 8px rgb(147, 0, 252), 
-    4px 4px 8px rgb(147, 0, 252);
-    /* border shadow */
-    border-color: rgba(147, 0, 252, 0.4);
-    /* animation: borderChange 0.5s; */
-    box-shadow: -4px -4px 8px rgba(147, 0, 252, 0.4), 
-                4px -4px 8px rgb(147, 0, 252, 0.4), 
-                -4px 4px 8px rgb(147, 0, 252, 0.4), 
-                4px 4px 8px rgb(147, 0, 252, 0.4);
-    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);  
+.project-item p{
+    font-size: 10px;
+    color: #fff;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    width: 90%;
 }
-.about-text a:not(:hover) {
-    /* text shadow */
-    text-shadow: #fff;
-    /* border shadow */
-    border-color: #fff;
-    /* animation: borderChange 0.5s; */
-    box-shadow: none;
-    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);  
-  }
+
