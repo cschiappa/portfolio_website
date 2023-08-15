@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristinas Portfolio</title>
+    <link rel="stylesheet" href="assets/style.css" id="lightStyles">
+    <link rel="stylesheet" href="assets/dark-mode-style.css" id="darkStyles" disabled="disabled">
+    <style>
+        @font-face {
+            font-family: 'lion_kingregular';
+            src: url(assets/fonts/lion_king-webfont.woff);
+        }
+        @font-face {
+            font-family: 'designer-webfont';
+            src: url(assets/fonts/designer-webfont.woff);
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+          color: white; 
+          margin-top: 30px; 
+          margin-right: 10px;
+        }
+      </style>
+    
+</head>
+<body>
+    <section class="header">
+
+        <nav class="box">
+        
+            <div class="text-box">
+                <h1>WELCOME</h1>
+                <h2>I'M CRISTINA AND THIS IS MY PORTFOLIO.</h2>
+                <p>Full stack developer based in Lisbon, Portugal.</p>
+                <p>Passionate about programming, arts and finance.</p>
+            </div>
+                
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="#pageTwo">about</a></li>
+                    <li><a href="projects.html">projects</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </div>
+
+            <div class="dark-mode-toggle-container">
+                <p class="dark-mode-text">switch to something a little bit... <span class="dark-mode-text" id="textDark">lighter</span></p>
+                <span class="material-symbols-outlined">
+                    arrow_right
+                </span>
+                <label class="dark-mode-toggle" for="darkModeToggle">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        
+        </nav>
+
+        <div class="stars-container">
+            <img src="assets/images/star.png" alt="star" class="star">
+            <img src="assets/images/star.png" alt="star" class="star">
+            <img src="assets/images/star.png" alt="star" class="star">     
+            <img src="assets/images/star.png" alt="star" class="star"> 
+            <img src="assets/images/star.png" alt="star" class="star">    
+            <img src="assets/images/star.png" alt="star" class="star">      
+        </div>
+
+    </section>
+    <!-- ABOUT PAGE -->
+    <section class="page-two" id="pageTwo">
+        <div class="stars-container">
+            <img src="assets/images/star.png" alt="star" class="star">
+            <img src="assets/images/star.png" alt="star" class="star">
+            <img src="assets/images/star.png" alt="star" class="star">     
+            <img src="assets/images/star.png" alt="star" class="star"> 
+            <img src="assets/images/star.png" alt="star" class="star">    
+            <img src="assets/images/star.png" alt="star" class="star">      
+            <img src="assets/images/star.png" alt="star" class="new-star">      
+        </div>
+        <nav class="about-box">
+            <div class="about-text">
+                <h2>About me</h2>
+                <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
+    
+                    Sed itaque labore ut enim galisum cum dolore officia. Et dicta dicta ex laboriosam corporis et natus possimus? Est enim voluptatem 33 sunt itaque rem sunt tempore. Et iure expedita et ratione numquam quo rerum facilis!
+                    
+                    Et deserunt voluptates quo dolorem architecto quo inventore illo in deleniti voluptatum. Sed fuga nisi est reiciendis error id enim facere in similique dicta ea temporibus sunt eum quaerat corrupti.<p>
+            </div>
+        </nav>   
+        <nav class="languages-box">
+            <div class="languages-text">
+                <h2>Skills</h2>
+                <ul>
+                    <img src="assets/images/flutter.png" alt="flutter">
+                    <img src="assets/images/python.png" alt="python">
+                    <img src="assets/images/html.png" alt="html">
+                    <img src="assets/images/css.png" alt="css">
+                    <img src="assets/images/javascript.png" alt="javascript">
+                </ul>
+            </div>
+        </nav>   
+    </section>
+    <!-- PROJECTS PAGE -->
+    <section class="page-three" id="pageThree">
+        <div class="stars-container">
+            <img src="assets/images/star.png" alt="star" class="star">
+            <img src="assets/images/star.png" alt="star" class="star">
+            <img src="assets/images/star.png" alt="star" class="star">     
+            <img src="assets/images/star.png" alt="star" class="star"> 
+            <img src="assets/images/star.png" alt="star" class="star">    
+            <img src="assets/images/star.png" alt="star" class="star">      
+            <img src="assets/images/star.png" alt="star" class="new-star">      
+        </div>
+        <nav class="projects-box">
+            
+        </nav>  
+    </section>
+    <!-- DARK MODE TOGGLE FILE -->
+    <script src="dark-mode-toggle.js"></script>
+
+    <script>
+        // Function to scroll to the "page-two" section
+        function scrollToPageTwo() {
+            const pageTwoSection = document.getElementById('pageTwo');
+            if (pageTwoSection) {
+                pageTwoSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    
+        // Attach the click event listener to the "about" link
+        const aboutLink = document.getElementById('aboutLink');
+        if (aboutLink) {
+            aboutLink.addEventListener('click', scrollToPageTwo);
+        }
+    </script>
+    
+</body>
+</html>
