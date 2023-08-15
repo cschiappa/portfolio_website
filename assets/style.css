@@ -268,7 +268,6 @@
 }
 .about-box{
     position: relative;
-    border: 2px solid blue;
     padding: 200px 100px;
     z-index: 1000;
 }
@@ -284,7 +283,7 @@
     font-size: 20px;
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
-    text-align: left;
+    text-align: justify;
     padding: 20px;
 }
 .languages-box{
@@ -292,7 +291,6 @@
     bottom: 0px;
     left: 0px;
     background-color: transparent;
-    border: 2px solid blue;
     padding: 200px 100px;
     display: flex;
     flex-direction: column;
