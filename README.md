@@ -15,7 +15,10 @@ Welcome to my Portfolio project, a website where I showcase my creative achievem
 
 My Web Portfolio is an interactive reflection of my creative journey. Through this platform, I aim to provide an extensive overview of my background, talents, and accomplishments. By hosting my portfolio online, I can easily share my work with potential clients, collaborators, and employers.
 
+
 ![Dark_theme](https://raw.githubusercontent.com/cschiappa/portfolio_website/main/assets/images/dark_theme_gif.gif)
+![Light_theme](https://raw.githubusercontent.com/cschiappa/portfolio_website/main/assets/images/light_theme_gif.gif)
+
 
 
 ## Built With
