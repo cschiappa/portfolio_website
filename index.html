@@ -21,7 +21,15 @@
           margin-top: 30px; 
           margin-right: 10px;
         }
-      </style>
+    </style>
+    <!-- clear form field after submission -->
+    <script>
+        window.onbeforeunload = () => {
+            for(const form of document.getElementsByTagName('form')) {
+                form.reset();
+            }
+        }
+    </script>
     
 </head>
 <body>
@@ -149,54 +157,95 @@
             <div class="projects-container">
                 <div class="project-item">
                     <a href="https://github.com/cschiappa/portfolio_website" target="_blank">
-                    <img src="assets/images/dark_background.png">
+                    <img src="assets/images/portfolio-website.png">
                     <h2 class="line-one text-animation">Portfolio Website,</h2>
                     </a>
                     <h2 class="line-two">a fun way to present all my projects.</h2>
 
-                    <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
+                    <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae.   
                     </p>
                 </div>
                 <div class="project-item">
                     <a href="https://github.com/cschiappa/pets-social" target="_blank">
-                    <img src="assets/images/dark_background.png">
+                    <img src="assets/images/pets-social.png">
                     <h2 class="line-one text-animation">Pets Social,</h2>
                     </a>
                     <h2 class="line-two">an innovating social media for pets.</h2>
 
-                    <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
+                    <p>Introducing a captivating social media platform designed exclusively for your beloved pets, where they can take center stage and connect with furry companions from around the world.
                     </p>
                 </div>
                 <div class="project-item">
                     <a href="https://github.com/cschiappa/lizzy-charts" target="_blank">
-                        <img src="assets/images/dark_background.png">
+                        <img src="assets/images/lizzy-charts.jpg">
                         <h2 class="line-one text-animation">Lizzy Charts,</h2>
                     </a>
                     <h2 class="line-two">a web based portfolio of many trading strategies.</h2>
                 
-                    <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
+                    <p>Website dedicated to illuminating ES futures trading strategies, including interactive charts crafted using the power of Python.
                     </p>
                 </div>
                 <div class="project-item">
                     <a href="">
-                        <img src="assets/images/dark_background.png">
+                        <img src="assets/images/trading-bot.jpeg">
                         <h2 class="line-one text-animation">Futures Trading Bot,</h2>
                     </a>
                     <h2 class="line-two">automation of trading made simpler.</h2>
                        
-                    <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
+                    <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. 
                     </p>
                 </div>
             </div>
         </nav>  
     </section>
+
     <!-- CONTACT PAGE -->
     <section class="contact-page" id="contactPage">
+        <!-- contact form -->
+        <div class="contact-box">
+            <div class="contact-container">
+                <h1 class="contact-text title-animation">Contact</h1>
+                <form
+                    action="https://formspree.io/f/xnqkpyqn"
+                    method="POST"
+                >
+                <label>
+                    Your email:
+                    <input type="email" name="email">
+                </label>
+                <label>
+                    Your message:
+                    <textarea name="message"></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button type="submit" class="send-button button-animation">Send</button>
+                </form>
+            </div>
 
+            <div class="socials-container">
+                <h1 class="title-animation">Socials</h1>
+                <div class="every-socials-container">
+                    <div class="image-container">
+                        <a href="https://www.linkedin.com/in/cristina-pietra/" target="_blank">
+                            <img src="assets/images/linkedin.png" alt="linkedin">
+                            <p>LinkedIn</p>
+                        </a>
+                    </div>
+                    <div class="image-container">
+                        <a href="https://github.com/cschiappa?tab=repositories" target="_blank">
+                            <img src="assets/images/github.png" alt="github">
+                            <p>Github</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+       </div>
     </section>
+
     <!-- DARK MODE TOGGLE FILE -->
     <script src="dark-mode-toggle.js"></script>
 
+    <!-- smooth scroll script -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -207,23 +256,6 @@
                 });
             });
         });
-    </script>
-
-    <!-- <script>
-        // Function to scroll to the "projects" section
-        function scrollToPageThree() {
-            const pageThreeSection = document.getElementById('pageThree');
-            if (pageThreeSection) {
-                pageThreeSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        // Attach the click event listener to the "projects" link
-        const projectsLink = document.getElementById('projectsLink');
-        if (projectsLink) {
-            projectsLink.addEventListener('click', scrollToPageThree);
-        }
-    </script> -->
-    
+    </script>    
 </body>
 </html>
