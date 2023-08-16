@@ -53,4 +53,4 @@ LinkedIn - https://www.linkedin.com/in/cristina-pietra/
 Project Link: 
 
 Thank you for visiting my programming portfolio. I hope you find inspiration and insights as you explore my coding endeavors.
-Feel free to explore my projects, delve into the code, and reach out if you'd like to learn more ♡	
+Feel free to explore my projects, delve into the code, and reach out if you'd like to learn more. ♡	
