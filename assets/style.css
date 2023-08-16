@@ -1,13 +1,41 @@
+:root{
+    --background-color: #070709;
+    --text-color: #fff;
+    --primary-shadow-color: #9300fc66;
+    --secondary-shadow-color: #9300fc;
+    --background-image: url(images/dark_background.png);
+    --font-weight: normal;
+}
+html[data-theme='dark']{
+    --background-color: #070709;
+    --text-color: #fff;
+    --primary-shadow-color: #9300fc66;
+    --secondary-shadow-color: #9300fc;
+    --background-image: url(images/dark_background.png);
+    --font-weight: normal;
+}
+html[data-theme='light']{
+    --background-color: #938f85;
+    --text-color: #000;
+    --primary-shadow-color: #ffffffab;
+    --secondary-shadow-color: #fff;
+    --background-image: url(images/light_background.png);
+    --font-weight: 600;
+}
+
 *{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+p, a{
+    font-weight: var(--font-weight);
+}
 /* Background */
 .header{
     min-height: 100vh;
     width: 100vw;
-    background-image: url(images/background.png);
+    background-image: var(--background-image);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -47,7 +75,7 @@
 /* title */
 .text-box h1{
     font-size: 90px;
-    color: #fff;
+    color: var(--text-color);
     font-family: 'lion_kingregular';
     text-align: center;
     font-weight: normal;
@@ -57,7 +85,7 @@
     content: '';
     width: 75%;
     height: 1px;
-    background: #fff;
+    background: var(--text-color);
     display: block;
     margin: auto;
     margin-bottom: -5px;
@@ -68,25 +96,25 @@
 }
 .text-box h2{
     font-size: 35px;
-    color: #fff;
+    color: var(--text-color);
     font-family: 'designer-webfont';
     text-align: center;
     padding-bottom: 10px;
-    text-shadow: -4px -4px 8px rgba(147, 0, 252, 0.4), 
-                4px -4px 8px rgb(147, 0, 252, 0.4), 
-                -4px 4px 8px rgb(147, 0, 252, 0.4), 
-                4px 4px 8px rgb(147, 0, 252, 0.4);
+    text-shadow: -4px -4px 8px var(--primary-shadow-color), 
+                4px -4px 8px var(--primary-shadow-color), 
+                -4px 4px 8px var(--primary-shadow-color), 
+                4px 4px 8px var(--primary-shadow-color);
     transition: text-shadow 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); 
 }
 .text-box h2:hover {
-    text-shadow: -4px -4px 8px rgb(147, 0, 252), 
-    4px -4px 8px rgb(147, 0, 252), 
-    -4px 4px 8px rgb(147, 0, 252), 
-    4px 4px 8px rgb(147, 0, 252);
+    text-shadow: -4px -4px 8px var(--secondary-shadow-color), 
+    4px -4px 8px var(--secondary-shadow-color), 
+    -4px 4px 8px var(--secondary-shadow-color), 
+    4px 4px 8px var(--secondary-shadow-color);
 }
 .text-box p{
     font-size: 20px;
-    color: #fff;
+    color: var(--text-color);
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
@@ -104,30 +132,30 @@
 }
 /* Menu buttons visuals*/
 .button-animation{
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
     padding: 10px; 
-    border: 2px solid #fff; 
+    border: 2px solid var(--text-color); 
     border-radius: 10px;
 }
 /* Menu buttons color change animation */
 .button-animation:hover {
-    text-shadow: -4px -4px 8px rgb(147, 0, 252), 
-    4px -4px 8px rgb(147, 0, 252), 
-    -4px 4px 8px rgb(147, 0, 252), 
-    4px 4px 8px rgb(147, 0, 252);
-    border-color: rgba(147, 0, 252, 0.4);
-    box-shadow: -4px -4px 8px rgba(147, 0, 252, 0.4), 
-                4px -4px 8px rgb(147, 0, 252, 0.4), 
-                -4px 4px 8px rgb(147, 0, 252, 0.4), 
-                4px 4px 8px rgb(147, 0, 252, 0.4);
+    text-shadow: -4px -4px 8px var(--secondary-shadow-color), 
+    4px -4px 8px var(--secondary-shadow-color), 
+    -4px 4px 8px var(--secondary-shadow-color), 
+    4px 4px 8px var(--secondary-shadow-color);
+    border-color: var(--primary-shadow-color);
+    box-shadow: -4px -4px 8px var(--primary-shadow-color), 
+                4px -4px 8px var(--primary-shadow-color), 
+                -4px 4px 8px var(--primary-shadow-color), 
+                4px 4px 8px var(--primary-shadow-color);
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);  
 }
 .button-animation:not(:hover) {
-    text-shadow: #fff;
-    border-color: #fff;
+    text-shadow: var(--text-color);
+    border-color: var(--text-color);
     box-shadow: none;
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);  
   }
@@ -195,7 +223,7 @@
 .dark-mode-text{
     margin-top: 30;
     font-size: 15px;
-    color: #fff;
+    color: var(--text-color);
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
@@ -216,7 +244,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(147, 0, 252);
+    background-color: var(--secondary-shadow-color);
     border-radius: 20px;
     transition: 0.4s;
   }
@@ -232,7 +260,7 @@
     transition: 0.4s;
   }
   input[type="checkbox"]:checked + .slider {
-    background-color: rgba(147, 0, 252, 0.4);
+    background-color: var(--primary-shadow-color);
   }
   input[type="checkbox"]:checked + .slider:before {
     transform: translateX(15px);
@@ -244,7 +272,7 @@
     width: 100vw;
     overflow-x: hidden;
     background-size: contain;
-    background-color: #070709;
+    background-color: var(--background-color);
     max-width: 100%;
     display: flex;
     flex-direction: row;
@@ -267,14 +295,14 @@
 /* about text */
 .about-text h2{
     font-size: 40px;
-    color: #fff;
+    color: var(--text-color);
     font-family: 'designer-webfont';
     text-align: center;
     font-weight: normal;
 }
 .about-text p{
     font-size: 20px;
-    color: #fff;
+    color: var(--text-color);
     font-family: 'Courier New', Courier, monospace;
     text-align: justify;
     padding: 20px;
@@ -297,7 +325,7 @@
 }
 .languages-area h2{
     font-size: 40px;
-    color: #fff;
+    color: var(--text-color);
     font-family: 'designer-webfont';
     font-weight: normal; 
 }
@@ -321,7 +349,7 @@
 
 .image-container p {
     font-size: 14px;
-    color: #fff;
+    color: var(--text-color);
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -339,7 +367,7 @@
     width: 100vw;
     overflow-x: hidden;
     background-size: contain;
-    background-color: #070709;
+    background-color: var(--background-color);
     max-width: 100%;
     display: flex;
     flex-direction: row;
@@ -368,7 +396,7 @@
 }
 .projects-box h1{
     font-size: 40px;
-    color: #fff;
+    color: var(--text-color);
     font-family: 'designer-webfont';
     font-weight: normal; 
 }
@@ -384,21 +412,21 @@
 }
 .line-one{
     font-size: 18px;
-    color: #fff;
+    color: var(--text-color);
     font-family: 'Courier New', Courier, monospace;  
     padding-left: 20px;
     font-weight: bold;
 }
 .line-two{
     font-size: 14px;
-    color: #fff;
+    color: var(--text-color);
     font-family: 'Courier New', Courier, monospace;
     padding-left: 20px;
     padding-top: 5px;
 }
 .project-item p{
     font-size: 16px;
-    color: #fff;
+    color: var(--text-color);
     text-align: justify;
     font-family: 'Courier New', Courier, monospace;
     padding: 20px;
@@ -420,33 +448,33 @@
 }
 /* Text color change animation */
 .text-animation:hover {
-    text-shadow: -4px -4px 8px rgb(147, 0, 252), 
-    4px -4px 8px rgb(147, 0, 252), 
-    -4px 4px 8px rgb(147, 0, 252), 
-    4px 4px 8px rgb(147, 0, 252);
+    text-shadow: -4px -4px 8px var(--secondary-shadow-color), 
+    4px -4px 8px var(--secondary-shadow-color), 
+    -4px 4px 8px var(--secondary-shadow-color), 
+    4px 4px 8px var(--secondary-shadow-color);
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);  
 }
 .text-animation:not(:hover) {
-    text-shadow: #fff;
+    text-shadow: var(--text-color);
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);  
   }
 
 .title-animation{
     font-size: 35px;
-    color: #fff;
+    color: var(--text-color);
     font-family: 'designer-webfont';
     text-align: center;
     padding-bottom: 10px;
-    text-shadow: -4px -4px 8px rgba(147, 0, 252, 0.4), 
-                4px -4px 8px rgb(147, 0, 252, 0.4), 
-                -4px 4px 8px rgb(147, 0, 252, 0.4), 
-                4px 4px 8px rgb(147, 0, 252, 0.4);
+    text-shadow: -4px -4px 8px var(--primary-shadow-color), 
+                4px -4px 8px var(--primary-shadow-color), 
+                -4px 4px 8px var(--primary-shadow-color), 
+                4px 4px 8px var(--primary-shadow-color);
     transition: text-shadow 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); 
 }
 .title-animation:hover {
-    text-shadow: -4px -4px 8px rgb(147, 0, 252), 
-    4px -4px 8px rgb(147, 0, 252), 
-    -4px 4px 8px rgb(147, 0, 252), 
-    4px 4px 8px rgb(147, 0, 252);
+    text-shadow: -4px -4px 8px var(--secondary-shadow-color), 
+    4px -4px 8px var(--secondary-shadow-color), 
+    -4px 4px 8px var(--secondary-shadow-color), 
+    4px 4px 8px var(--secondary-shadow-color);
 }
 
