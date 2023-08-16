@@ -39,9 +39,9 @@
                 
             <div class="nav-links" id="navLinks">
                 <ul>
-                    <li><a href="#pageTwo" class="button-animation">about</a></li>
-                    <li><a href="#pageThree" class="button-animation">projects</a></li>
-                    <li><a href="contact.html" class="button-animation">contact</a></li>
+                    <li><a href="#aboutPage" class="button-animation">about</a></li>
+                    <li><a href="#projectsPage" class="button-animation">projects</a></li>
+                    <li><a href="#contactPage" class="button-animation">contact</a></li>
                 </ul>
             </div>
 
@@ -69,10 +69,10 @@
 
     </section>
     <!-- ABOUT PAGE -->
-    <section class="page-two" id="pageTwo">
+    <section class="page-two" id="aboutPage">
         <nav class="about-box">
             <div class="about-text">
-                <h2>About me</h2>
+                <h2 class="title-animation">About me</h2>
                 <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
     
                     Sed itaque labore ut enim galisum cum dolore officia. Et dicta dicta ex laboriosam corporis et natus possimus? Est enim voluptatem 33 sunt itaque rem sunt tempore. Et iure expedita et ratione numquam quo rerum facilis!
@@ -85,7 +85,7 @@
         </nav>   
         <nav class="languages-box">
             <div class="languages-area">
-                <h2>Skills</h2>
+                <h2 class="title-animation">Skills</h2>
                 <div class="every-image-container">
                     <div class="image-container">
                         <img src="assets/images/flutter.png" alt="flutter">
@@ -135,7 +135,7 @@
         </div> 
     </section>
     <!-- PROJECTS PAGE -->
-    <section class="page-three" id="pageThree">
+    <section class="page-three" id="projectsPage">
         <div class="stars-container">
             <img src="assets/images/star.png" alt="star" class="star">
             <img src="assets/images/star.png" alt="star" class="star">
@@ -146,38 +146,44 @@
             <img src="assets/images/star.png" alt="star" class="new-star">      
         </div>
         <nav class="projects-box">
-            <h1>Projects</h1>
+            <h1 class="title-animation">Projects</h1>
             <div class="projects-container">
                 <div class="project-item">
+                    <a href="https://github.com/cschiappa/portfolio_website" target="_blank">
                     <img src="assets/images/dark_background.png">
-                    <span class="line-one">Portfolio Website,</span>
-                    <span class="line-two">a fun way to present all my projects.</span>
+                    <h2 class="line-one text-animation">Portfolio Website,</h2>
+                    </a>
+                    <h2 class="line-two">a fun way to present all my projects.</h2>
 
                     <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
                     </p>
                 </div>
                 <div class="project-item">
+                    <a href="https://github.com/cschiappa/pets-social" target="_blank">
                     <img src="assets/images/dark_background.png">
-                    <span class="line-one">Pets Social,</span>
-                    <span class="line-two">an innovating social media for pets.</span>
+                    <h2 class="line-one text-animation">Pets Social,</h2>
+                    </a>
+                    <h2 class="line-two">an innovating social media for pets.</h2>
 
                     <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
                     </p>
                 </div>
                 <div class="project-item">
-                    <img src="assets/images/dark_background.png">
-                    <span class="line-one">Lizzy Charts,</span>
-                    <span class="line-two">a web based portfolio of many trading strategies.</span>
+                    <a href="https://github.com/cschiappa/lizzy-charts" target="_blank">
+                        <img src="assets/images/dark_background.png">
+                        <h2 class="line-one text-animation">Lizzy Charts,</h2>
+                    </a>
+                    <h2 class="line-two">a web based portfolio of many trading strategies.</h2>
                 
                     <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
                     </p>
                 </div>
-            </div>
-            <div class="projects-container">
                 <div class="project-item">
-                    <img src="assets/images/dark_background.png">
-                    <span class="line-one">Futures Trading Bot,</span>
-                    <span class="line-two">automation of trading made simpler.</span>
+                    <a href="">
+                        <img src="assets/images/dark_background.png">
+                        <h2 class="line-one text-animation">Futures Trading Bot,</h2>
+                    </a>
+                    <h2 class="line-two">automation of trading made simpler.</h2>
                        
                     <p>Lorem ipsum dolor sit amet. Ut omnis similique et numquam nihil sit internos quas ab minima officiis et error aliquid eos recusandae molestiae. Eos adipisci tempora ut minus voluptates ab optio laudantium eos quod assumenda nam reprehenderit vero.
                     </p>
@@ -185,26 +191,26 @@
             </div>
         </nav>  
     </section>
+    <!-- CONTACT PAGE -->
+    <section class="contact-page" id="contactPage">
+
+    </section>
     <!-- DARK MODE TOGGLE FILE -->
     <script src="dark-mode-toggle.js"></script>
 
     <script>
-        // Function to scroll to the "about" section
-        function scrollToPageTwo() {
-            const pageTwoSection = document.getElementById('pageTwo');
-            if (pageTwoSection) {
-                pageTwoSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    
-        // Attach the click event listener to the "about" link
-        const aboutLink = document.getElementById('aboutLink');
-        if (aboutLink) {
-            aboutLink.addEventListener('click', scrollToPageTwo);
-        }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 
-    <script>
+    <!-- <script>
         // Function to scroll to the "projects" section
         function scrollToPageThree() {
             const pageThreeSection = document.getElementById('pageThree');
@@ -218,7 +224,7 @@
         if (projectsLink) {
             projectsLink.addEventListener('click', scrollToPageThree);
         }
-    </script>
+    </script> -->
     
 </body>
 </html>

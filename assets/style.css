@@ -76,7 +76,7 @@
                 4px -4px 8px rgb(147, 0, 252, 0.4), 
                 -4px 4px 8px rgb(147, 0, 252, 0.4), 
                 4px 4px 8px rgb(147, 0, 252, 0.4);
-    transition: text-shadow 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); /* Smoothly transition the color change */
+    transition: text-shadow 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); 
 }
 .text-box h2:hover {
     text-shadow: -4px -4px 8px rgb(147, 0, 252), 
@@ -95,7 +95,6 @@
     flex: 1;
     text-align: center;
     padding-top: 20px;
-    /* padding-right: 200px; */
 }
 .nav-links ul li{
     list-style: none;
@@ -109,20 +108,17 @@
     text-decoration: none;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
-    padding: 10px; /* Add padding for spacing inside the box */
-    border: 2px solid #fff; /* Border properties */
+    padding: 10px; 
+    border: 2px solid #fff; 
     border-radius: 10px;
 }
 /* Menu buttons color change animation */
 .button-animation:hover {
-    /* text shadow */
     text-shadow: -4px -4px 8px rgb(147, 0, 252), 
     4px -4px 8px rgb(147, 0, 252), 
     -4px 4px 8px rgb(147, 0, 252), 
     4px 4px 8px rgb(147, 0, 252);
-    /* border shadow */
     border-color: rgba(147, 0, 252, 0.4);
-    /* animation: borderChange 0.5s; */
     box-shadow: -4px -4px 8px rgba(147, 0, 252, 0.4), 
                 4px -4px 8px rgb(147, 0, 252, 0.4), 
                 -4px 4px 8px rgb(147, 0, 252, 0.4), 
@@ -130,11 +126,8 @@
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);  
 }
 .button-animation:not(:hover) {
-    /* text shadow */
     text-shadow: #fff;
-    /* border shadow */
     border-color: #fff;
-    /* animation: borderChange 0.5s; */
     box-shadow: none;
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);  
   }
@@ -157,10 +150,10 @@
 }
 @keyframes twinkling {
     0%, 100% {
-        opacity: 0.2; /* Start and end with lower opacity */
+        opacity: 0.2; 
     }
     50% {
-        opacity: 1; /* Peak brightness at 50% of the animation */
+        opacity: 1; 
     }
 }
 .star:nth-child(1) {
@@ -379,44 +372,81 @@
     font-family: 'designer-webfont';
     font-weight: normal; 
 }
-/* first projects container */
-.projects-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 .second-projects-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-.project-item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
 }
 .project-item img{
     padding: 20px;
     width: 90%;
     height: auto;
 }
-.project-item .line-one{
+.line-one{
     font-size: 18px;
     color: #fff;
-    font-family: 'Courier New', Courier, monospace;   
+    font-family: 'Courier New', Courier, monospace;  
+    padding-left: 20px;
+    font-weight: bold;
 }
 .line-two{
     font-size: 14px;
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
+    padding-left: 20px;
+    padding-top: 5px;
 }
 .project-item p{
-    font-size: 10px;
+    font-size: 16px;
     color: #fff;
     text-align: justify;
     font-family: 'Courier New', Courier, monospace;
     padding: 20px;
-    width: 90%;
+}
+/* calculates the width of each project-item to approximately one-third of the container's width (minus some margin to create spacing between items).  */
+.project-item {
+    display: inline-block;
+    width: calc(33.33% - 10px); 
+    vertical-align: top;
+    box-sizing: border-box;
+}
+/* Clear every 3rd element. Targets every element that is a multiple of 3 (3rd, 6th, 9th, etc)*/
+.project-item:nth-child(3n) {
+    clear: both;
+    margin-right: 0; /* Reset margin for the last item in the row */
+}
+.projects-container a{
+    text-decoration: none;
+}
+/* Text color change animation */
+.text-animation:hover {
+    text-shadow: -4px -4px 8px rgb(147, 0, 252), 
+    4px -4px 8px rgb(147, 0, 252), 
+    -4px 4px 8px rgb(147, 0, 252), 
+    4px 4px 8px rgb(147, 0, 252);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);  
+}
+.text-animation:not(:hover) {
+    text-shadow: #fff;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);  
+  }
+
+.title-animation{
+    font-size: 35px;
+    color: #fff;
+    font-family: 'designer-webfont';
+    text-align: center;
+    padding-bottom: 10px;
+    text-shadow: -4px -4px 8px rgba(147, 0, 252, 0.4), 
+                4px -4px 8px rgb(147, 0, 252, 0.4), 
+                -4px 4px 8px rgb(147, 0, 252, 0.4), 
+                4px 4px 8px rgb(147, 0, 252, 0.4);
+    transition: text-shadow 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); 
+}
+.title-animation:hover {
+    text-shadow: -4px -4px 8px rgb(147, 0, 252), 
+    4px -4px 8px rgb(147, 0, 252), 
+    -4px 4px 8px rgb(147, 0, 252), 
+    4px 4px 8px rgb(147, 0, 252);
 }
 
