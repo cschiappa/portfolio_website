@@ -57,21 +57,6 @@ p, a{
     align-items: center;
     z-index: 1000;
 }
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .header {
-        min-height: 60vh; /* Adjust the height as needed */
-    }
-    .box {
-        width: 80%; /* Adjust the width as needed */
-        max-width: 400px; /* Limit the maximum width for smaller screens */
-        position: static; /* Change position to static on smaller screens */
-        margin: 20px auto; /* Center the box horizontally */
-        bottom: auto; /* Reset the bottom position */
-        left: auto; /* Reset the left position */
-        padding: 30px; /* Adjust padding for smaller screens */
-    }
-}
 /* title */
 .text-box h1{
     font-size: 90px;
@@ -239,6 +224,7 @@ p, a{
     display: none;
   }
   .slider {
+    width: 35px;
     position: absolute;
     top: 0;
     left: 0;
@@ -299,13 +285,14 @@ p, a{
     font-family: 'designer-webfont';
     text-align: center;
     font-weight: normal;
+    padding-bottom: 40px;
 }
 .about-text p{
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text-color);
     font-family: 'Courier New', Courier, monospace;
-    text-align: justify;
-    padding: 20px;
+    text-align: center;
+    padding: 5px;
 }
 .languages-box{
     position: relative;
@@ -330,9 +317,9 @@ p, a{
     font-weight: normal; 
 }
 .every-image-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5,1fr);
 }
 .image-container {
     display: flex;
@@ -346,22 +333,17 @@ p, a{
     width: 70px;
     height: 70px;
 }
-
 .image-container p {
     font-size: 14px;
     color: var(--text-color);
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
-.second-every-image-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 .download-cv{
     text-align: center;
+    padding: 30px;
 }
-/* PAGE TWO - ABOUT PAGE */
+/* PROJECTS PAGE */
 .page-three{
     min-height: 100vh;
     width: 100vw;
@@ -400,6 +382,11 @@ p, a{
     font-family: 'designer-webfont';
     font-weight: normal; 
 }
+.projects-container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+}
 .project-item img{
     padding: 20px;
     width: 90%;
@@ -425,17 +412,8 @@ p, a{
     font-family: 'Courier New', Courier, monospace;
     padding: 20px;
 }
-/* calculates the width of each project-item to approximately one-third of the container's width (minus some margin to create spacing between items).  */
 .project-item {
-    display: inline-block;
-    width: calc(33.33% - 10px); 
     vertical-align: top;
-    box-sizing: border-box;
-}
-/* Clear every 3rd element. Targets every element that is a multiple of 3 (3rd, 6th, 9th, etc)*/
-.project-item:nth-child(3n) {
-    clear: both;
-    margin-right: 0; /* Reset margin for the last item in the row */
 }
 .projects-container a{
     text-decoration: none;
@@ -561,4 +539,265 @@ form {
 }
 .image-container a{
     text-decoration: none;
+}
+
+
+/* MOBILE VERSION */
+@media (max-width: 768px) {
+    /* Global Font and Text Adjustments */
+    h2, p, a {
+        font-size: 16px;
+    }
+    /* Main page */
+    .header {
+        min-height: 50vh;
+        padding: 50px 0;
+    }
+    .box {
+        width: 90%;
+        max-width: 400px;
+        padding: 50px 20px;
+    }
+    .text-box h1 {
+        font-size: 40px;
+    }
+    .text-box h1::before {
+        width: 60%;
+    }
+    .text-box h2 {
+        font-size: 20px;
+    }
+    .text-box p {
+        font-size: 16px;
+    }
+    .nav-links {
+        flex: none;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .nav-links ul li {
+        padding: 5px 8px;
+    }
+    .button-animation {
+        font-size: 16px;
+        padding: 8px;
+        border: 2px solid var(--text-color);
+        border-radius: 8px;
+    }
+    /* About page */
+    .page-two {
+        flex-direction: column;
+    }
+    .about-box, .languages-box {
+        padding: 100px 20px;
+    }
+    .about-text h2 {
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+    .about-text p {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .languages-area h2 {
+        font-size: 30px;
+    }
+    .image-container img {
+        width: 40px;
+        height: 40px;
+    }
+    .every-image-container{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3,1fr);
+        max-width: 100%;
+    }
+    /* Projects page */
+    .projects-box {
+        padding: 100px 20px; 
+    }
+    .projects-box h1 {
+        font-size: 30px; 
+    }
+    .project-item img {
+        padding: 10px; 
+        width: 100%; 
+        height: auto; 
+    }
+    .line-one {
+        font-size: 18px; 
+        padding-left: 10px; 
+    }
+    .line-two {
+        font-size: 14px; 
+        padding-left: 10px; 
+        padding-top: 3px; 
+    }
+    .project-item p {
+        font-size: 14px; 
+        padding: 10px; 
+    }
+    .projects-container{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .title-animation {
+        font-size: 25px; 
+    }
+    /* Contact page */
+    .contact-box {
+        padding: 100px 20px; 
+    }
+    .contact-box h1 {
+        font-size: 30px; 
+    }
+    form {
+        padding: 10px;
+        max-width: 100%; 
+    }
+    label {
+        margin-bottom: 3px; 
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+    input[type="submit"],
+    .send-button {
+        font-size: 14px; 
+        padding: 8px 16px; 
+    }
+    .socials-container p {
+        font-size: 12px; 
+    }
+    .socials-container img {
+        width: 50px; 
+        height: 50px; 
+    }
+    .contact-container {
+        padding-bottom: 20px; 
+    }
+    .contact-text {
+        padding-bottom: 20px; 
+    }
+    .every-socials-container {
+        padding-top: 5px; 
+    }
+    /* stars remove */
+    .stars-container {
+        display: none;
+    }
+}
+
+    /* TABLET VERSION */
+    @media (min-width: 769px) and (max-width: 1500px){
+        .page-two {
+            flex-direction: column;
+        }
+        .about-box, .languages-box {
+            padding: 100px 20px;
+        }
+        .about-text h2 {
+            font-size: 30px;
+            padding-bottom: 20px;
+        }
+        .about-text p {
+            font-size: 16px;
+            padding: 10px;
+        }
+        .languages-area h2 {
+            font-size: 30px;
+        }
+        .image-container img {
+            width: 40px;
+            height: 40px;
+        }
+        .every-image-container{
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(3,1fr);
+            max-width: 100%;
+        }
+        /* Projects page */
+        .projects-box {
+            padding: 100px 20px; 
+        }
+        .projects-box h1 {
+            font-size: 30px; 
+        }
+        .project-item img {
+            padding: 10px; 
+            width: 100%; 
+            height: auto; 
+        }
+        .line-one {
+            font-size: 18px; 
+            padding-left: 10px; 
+        }
+        .line-two {
+            font-size: 14px; 
+            padding-left: 10px; 
+            padding-top: 3px; 
+        }
+        .project-item p {
+            font-size: 14px; 
+            padding: 10px; 
+        }
+        .projects-container{
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .title-animation {
+            font-size: 25px; 
+        }
+        /* Contact page */
+        .contact-box {
+            padding: 100px 20px; 
+        }
+        .contact-box h1 {
+            font-size: 30px; 
+        }
+        form {
+            padding: 10px;
+            max-width: 100%; 
+        }
+        label {
+            margin-bottom: 3px; 
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 8px;
+            margin-bottom: 8px;
+        }
+        input[type="submit"],
+        .send-button {
+            font-size: 14px; 
+            padding: 8px 16px; 
+        }
+        .socials-container p {
+            font-size: 12px; 
+        }
+        .socials-container img {
+            width: 50px; 
+            height: 50px; 
+        }
+        .contact-container {
+            padding-bottom: 20px; 
+        }
+        .contact-text {
+            padding-bottom: 20px; 
+        }
+        .every-socials-container {
+            padding-top: 5px; 
+        }
+        /* stars remove */
+        .stars-container {
+            display: none;
+        }
+    
 }
