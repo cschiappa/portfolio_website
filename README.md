@@ -1,6 +1,7 @@
 # Cristina's Portfolio
 
 Welcome to my Portfolio project, a website where I showcase my creative achievements, projects, and experiences. 
+
 You can visit the website here: https://cschiappa.github.io/portfolio_website/
 
 ## Table of Contents
