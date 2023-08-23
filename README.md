@@ -2,6 +2,8 @@
 
 Welcome to my Portfolio project, a website where I showcase my creative achievements, projects, and experiences. 
 
+You can visit the website here: https://cschiappa.github.io/portfolio_website/
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Built with](#built-with)
@@ -50,7 +52,7 @@ No installation is required. Simply visit my portfolio website at (website) to s
 
 LinkedIn - https://www.linkedin.com/in/cristina-pietra/ 
 
-Project Link: 
+Project Link: https://cschiappa.github.io/portfolio_website/
 
 Thank you for visiting my programming portfolio. I hope you find inspiration and insights as you explore my coding endeavors.
 Feel free to explore my projects, delve into the code, and reach out if you'd like to learn more. ♡	
